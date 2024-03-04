@@ -1,0 +1,24 @@
+.header{
+    font-size: larger;
+    font-family: 'Times New Roman';
+    text-align: center;
+    background-color: aqua;
+}
+.footer{
+    font-size:medium;
+    font-family: 'Times New Roman';
+    text-align: center;
+    background-color: aqua;
+}
+.form { 
+    border: 3px solid #f1f1f1;
+    padding: 15px;
+  }
+
+.input[type=text], input[type=password] { 
+    width: 100%;
+}
+.a{
+    border: 3px solid #f1f1f1;
+    padding: 15px;
+}

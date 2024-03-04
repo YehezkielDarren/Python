@@ -1,0 +1,12 @@
+.form{
+    border: 3px solid #000;
+}
+.label{
+    color: aqua;
+}
+.input [type=text], input [type=password]{
+    width: 100%;
+}
+.input [type=password]{
+    width: 100%;
+}
