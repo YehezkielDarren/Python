@@ -13,19 +13,19 @@ def narsistik(bilangan_tunggal : int):
     ratusan=bilangan_tunggal//100
     if bilangan_tunggal>=0:
         if bilangan_tunggal<10:
-            return "Narsistik"
-    elif bilangan_tunggal<100:
+            print(f"{bilangan_tunggal} :Narsistik")
+    elif bilangan_tunggal<100 and bilangan_tunggal>=10:
         jumlah= satuan**2+ puluhan**2
         if jumlah==bilangan_tunggal:
-            return "Narsistik"
+            print(f"{bilangan_tunggal} : Narsistik")
         else:
-            return "Bukan Narsistik"
-    elif bilangan_tunggal<1000:
+            print(f"{bilangan_tunggal} : Bukan Narsistik")
+    elif bilangan_tunggal>=100 and bilangan_tunggal<1000:
         jumlah=satuan**3+ puluhan**3+ratusan**3
         if jumlah == bilangan_tunggal:
-            return "Narsistik"
+            print(f"{bilangan_tunggal} :Narsistik")
         else:
-            return "Bukan Narsistik"
+            print(f"{bilangan_tunggal} : Bukan Narsistik")
     else:
         return "Di Luar Dari Ketentuan Range" 
     
