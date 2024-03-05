@@ -13,19 +13,19 @@ def narsistik(bilangan_tunggal : int):
     ratusan=bilangan_tunggal//100
     if bilangan_tunggal>=0:
         if bilangan_tunggal<10:
-            print(f"{bilangan_tunggal} :Narsistik")
-    elif bilangan_tunggal<100 and bilangan_tunggal>=10:
-        jumlah= satuan**2+ puluhan**2
-        if jumlah==bilangan_tunggal:
-            print(f"{bilangan_tunggal} : Narsistik")
-        else:
-            print(f"{bilangan_tunggal} : Bukan Narsistik")
-    elif bilangan_tunggal>=100 and bilangan_tunggal<1000:
-        jumlah=satuan**3+ puluhan**3+ratusan**3
-        if jumlah == bilangan_tunggal:
-            print(f"{bilangan_tunggal} :Narsistik")
-        else:
-            print(f"{bilangan_tunggal} : Bukan Narsistik")
+            return f"{bilangan_tunggal} :Narsistik"
+        elif bilangan_tunggal<100 and bilangan_tunggal>=10:
+            jumlah= satuan**2+ puluhan**2
+            if jumlah==bilangan_tunggal:
+                return f"{bilangan_tunggal} :Narsistik"
+            else:
+                return f"{bilangan_tunggal} :Bukan Narsistik"
+        elif bilangan_tunggal>=100 and bilangan_tunggal<1000:
+            jumlah=satuan**3+ puluhan**3+ratusan**3
+            if jumlah == bilangan_tunggal:
+                return f"{bilangan_tunggal} :Narsistik"
+            else:
+                return f"{bilangan_tunggal} :Bukan Narsistik"
     else:
         return "Di Luar Dari Ketentuan Range" 
     
@@ -37,7 +37,7 @@ def deretPentagon(sebuah_bilangan : int):
         suku=i*(3*i-1)/2 ## rumus suku ke-n = n*(3*n-1)/2
         jumlah+= suku ##menjumlahkan semua suku dalam i-range
         print(f"Suku ke-{i} -> {suku}")
-    print(f"Jumlah {i} suku : {jumlah}")
+    return f"Jumlah {i} suku : {jumlah}"
 
 def main():
     print("=======================================")
