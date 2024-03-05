@@ -1,3 +1,5 @@
+import statistics
+
 """Fungsi Inputan"""
 
 def inputan():
@@ -21,7 +23,8 @@ def median(bilangan):
 
 """Fungsi Mencari Modus"""
 def modus(bilangan):
-    pass
+    modus = statistics.mode(bilangan)
+    return modus
 
 def main():
     pass
