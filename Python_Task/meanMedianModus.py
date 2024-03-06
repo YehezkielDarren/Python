@@ -9,17 +9,22 @@ def inputan():
         data.append(int(i))
     return data
 
+def inputanSorted(bilangan):
+    bilangan=sorted(bilangan)
+    return bilangan
+
 """Fungsi Menghitung Median"""
 def mean(bilangan):
     return sum(bilangan)/len(bilangan)
 
 def median(bilangan):
-    bilangan=bilangan.sort()
-    titik_tengah=len(bilangan)
-    if titik_tengah%2!=0:
-        return bilangan[titik_tengah]
+    inputanSorted(bilangan)
+    panjang=len(bilangan)
+    titik_tengah=panjang//2
+    if panjang%2!=0:
+        return bilangan[titik_tengah+1]
     else :
-        return (bilangan[titik_tengah-1]+bilangan[titik_tengah+1])/2
+        return (bilangan[titik_tengah]+bilangan[titik_tengah+1])/2
 
 """Fungsi Mencari Modus"""
 def modus(bilangan):
@@ -29,9 +34,14 @@ def modus(bilangan):
 def main():
     print("------Data------")
     temp=inputan()
-    mean(temp)
-    median(temp)
-    modus(temp)
+    print("================")
+    print("Isi data yang telah di susun : ", inputanSorted(temp))
+    print("================")
+    print("Rata-rata data : ",mean(temp))
+    print("================")
+    print("Titik tengah data : ",median(temp))
+    print("================")
+    print("Modus data : ",modus(temp))
 
 if __name__ =="__main__":
     main()
