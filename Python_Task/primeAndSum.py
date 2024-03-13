@@ -1,7 +1,7 @@
 def prime():
     _range=int(input("Insert Range of Number : "))
     storage=[]
-    summ=0
+
     for i in range(2,_range+1):
         _statement=True
         for j in range(2,int(i**0.5)+1):
@@ -9,8 +9,8 @@ def prime():
                 _statement=False
                 break
         if _statement:
-            return 
-    
+            storage.append(i) 
+    summ=sum(storage)
     print(*storage, summ)
 
 prime()
