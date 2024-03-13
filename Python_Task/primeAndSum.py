@@ -9,8 +9,7 @@ def prime():
                 _statement=False
                 break
         if _statement:
-            storage.append(i)
-            summ+=i
+            return 
     
     print(*storage, summ)
 
