@@ -345,13 +345,20 @@ def main():
     print("=====================")
     options=int(input("Input the number list : "))
     if options==1:
+        print()
         RockPapScis()
     elif options==2:
+        print()
         hangman()
+    elif options==3:
+        print("Under Developement, Coming Soon!!")
+        main()
     elif options==4:
+        print()
         numberGuessing()
     else:
-        print("There is no game available or still under developing")
+        print("There is no game available, try again!!")
+        main()
 
 if __name__=='__main__':
     main()
