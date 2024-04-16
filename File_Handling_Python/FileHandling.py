@@ -13,7 +13,6 @@ def CreateNewFile(namaFile:str,baris):
     except IOError:
         print(f"'{namaFile}' already exist !!!")
 
-
 def appendFile(namaFile,baris):
     try:
         with open(namaFile,"a") as f:
@@ -67,7 +66,6 @@ def lineFile(namaFile):
         print("File Not Found!!!")
         pass
     
-
 def deleteFile(namaFile):
     try:
         os.remove(namaFile)
