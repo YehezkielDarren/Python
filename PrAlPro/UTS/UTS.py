@@ -81,6 +81,4 @@ def main():
         huruf=input("Masukkan Sebuah Kata : ")
         print(f"Hasil : {hapusduplikatberurutan(huruf)}")
         
-main()
-        
-        
+main()     
