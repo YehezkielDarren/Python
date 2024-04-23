@@ -3,7 +3,9 @@ def appendData():
     nomor_ID=""
     print("Silahkan masukkan data yang diperlukan\n")
     nama=input("Silahkan masukkan nama lengkap anda\n>>").split()
+    print()
     lahir=input("Silahkan masukkan tanggal lahir (Format :'DD-MM-YY')\n>>").split("-")
+    print()
     nomor_ID+=lahir[1]
     for i in range(len(nama)):
         if i%2!=0:
@@ -16,23 +18,16 @@ def appendData():
     return list_temp
 
 def readData(arr):
-    for i in arr:
-        print("Nomor ID >>", i[0])
-        print("Nama Lengkap >>", i[1])
-        print("Nama Depan >>", i[1][0])
-        print("Nama Belakang >>", i[1][-1])
-        print("Tanggal Lahir >>", i[2][0])
-        print("Bulan Lahir >>", i[2][1])
-        print("Tahun Lahir >>", i[2][2])
-        print(i)
+    for i in range(len(arr)):
+        print(arr[i])
 
 
     
 
 def main():
-    arr=[]
     yes_no=['Y','N']
     while True:
+        arr=[]
         print("1. Menambah Data")
         print("2. Melihat Data")
         print("3. Exit")
@@ -43,19 +38,23 @@ def main():
             print("Silahkan Masukkan Pilihan Berupa Angka")
             print()
             continue
-        else:
-            if inpt<1 and inpt>3:
-                print("Pilihan hanya dari 1-3")
-                continue
         if inpt==1:
-            hasil=appendData()
-            arr.append(hasil)
+            while True:
+                hasil=appendData()
+                arr.append(hasil)
+                yesNo=input("Apakah ingin lanjut ? (Y/N) ").upper()
+                if yesNo==yes_no[0]:
+                    continue
+                else:
+                    break
             
         elif inpt==2:
             readData(hasil)
-            
-        else:
+        elif inpt==3:
             print("Terima kasih")
             break
+        else:
+            print("Pilihan yang tersedia hanya 1-3.\n")
+            continue
 
 main()
