@@ -1,24 +1,31 @@
-import Matdis
-import random as rnd
+def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1 
+    r = 2 * i + 2 
 
-def main():
-    arr=[]
-    banyakAngka=int(input("masukkan banyaknya angka yang akan digenerate acak : "))
-    for _ in range(banyakAngka):
-        x=rnd.randint(1,100)
-        while x in arr:
-            x=rnd.randint(1,100)
-        arr.append(x)
-    target=int(input("What's your target? "))
-    sort=Matdis.insertion(arr)
-    search=Matdis.BinarySearch(target,sort)
-    print(f"Array setelah diurutkan:\n{sort}")
-    if search!=0:
-        print(f"Bilangan {target} ada di indeks ke {search} ")
-    else:
-        print(f"Bilangan {target} tidak ada di array")
+    if l < n and arr[i] < arr[l]:
+        largest = l
+
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+
+def heapSort(arr):
+    n = len(arr)
+
+    for i in range(n, -1, -1):
+        heapify(arr, n, i)
+
+    for i in range(n-1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]
+        heapify(arr, i, 0)
         
-main()
-    
-
-
+        
+arr = [71, 79, 9, 11, 14, 76, 54, 32]
+heapSort(arr)
+print ("After applying Heap Sort, the Array is:")
+for i in range(len(arr)):
+    print (arr[i],end=" ")
