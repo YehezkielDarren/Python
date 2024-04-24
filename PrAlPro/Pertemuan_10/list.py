@@ -19,15 +19,23 @@ def appendData():
 
 def readData(arr):
     for i in range(len(arr)):
+        print(f"Nomor ID >> {arr[i][0]}")
+        print(f"Nama Lengkap >> {" ".join(i for i in arr[i][1])}")
+        print(f"Nama Depan >> {arr[i][1][1]}")
+        print(f"Nama Depan >> {arr[i][1][-1]}")
+        print(f"Tanggal Lahir >> {arr[i][2][0]}")
+        print(f"Bulan Lahir >> {arr[i][2][1]}")
+        print(f"Tahun Lahir >> {arr[i][2][2]}")
         print(arr[i])
+        print()
 
 
     
 
 def main():
     yes_no=['Y','N']
+    dataBase=[]
     while True:
-        arr=[]
         print("1. Menambah Data")
         print("2. Melihat Data")
         print("3. Exit")
@@ -41,7 +49,7 @@ def main():
         if inpt==1:
             while True:
                 hasil=appendData()
-                arr.append(hasil)
+                dataBase.append(hasil)
                 yesNo=input("Apakah ingin lanjut ? (Y/N) ").upper()
                 if yesNo==yes_no[0]:
                     continue
@@ -49,7 +57,7 @@ def main():
                     break
             
         elif inpt==2:
-            readData(hasil)
+            readData(dataBase)
         elif inpt==3:
             print("Terima kasih")
             break
