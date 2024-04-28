@@ -1,12 +1,6 @@
-seconds=129
-time=[]
-minute=seconds//60
-second=seconds%60
-hours=minute//60
-print(f"{hours} hours : {minute} : {second}")
-#mencari hasil bagi
-while seconds != 60:
-    temp=""
-    x=seconds//60
-    y=seconds
-    
+def BigThree(n:list):
+    n.sort(reverse=True)
+    return n[:3]
+#Cara Cepat, tapi hanya untuk data int dan bukan untuk list dalam list
+
+print(BigThree([9,0,1,3,4,-1,10]))
