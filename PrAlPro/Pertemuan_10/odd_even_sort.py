@@ -1,7 +1,5 @@
 def odd_even(a : str):
-    soal=a.split(",")
-    ganjil=[]
-    genap=[]
+    soal,ganjil,genap=a.split(","),[],[]
     for i in soal :
         if i.isdigit()==True:
             if int(i)%2==0:
@@ -14,4 +12,4 @@ def odd_even(a : str):
     jawab=ganjil+genap
     return " ".join(str(j) for j in jawab)
 
-print(odd_even())        
+print(odd_even("1,3,5,6,2"))        
