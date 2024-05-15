@@ -1,0 +1,2 @@
+string="QWERTYUIOP"
+strings="qwerTY"
