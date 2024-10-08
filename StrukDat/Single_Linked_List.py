@@ -3,6 +3,10 @@ class Node :
         self.data=data
         self.next=None
 
+    @property
+    def get_data(self):
+        return self.data
+
 class NonCircular:
     #CONSTRUCTOR
     def __init__(self):
@@ -10,6 +14,8 @@ class NonCircular:
         self.tail = None
         self._size=0
     #METHOD
+    def isempty(self):
+        return self._size == 0
     def insert_head(self,data):
         new_node=Node(data)
         if self._size==0:
@@ -91,7 +97,7 @@ class NonCircular:
             self.head=self.head.next
             del helper
             self._size-=1
-        return True
+            return self.head.data # memunculkan Top pada stack
     def delete_tail(self):
         if self._size==0:
             return False
