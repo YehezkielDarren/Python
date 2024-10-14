@@ -7,7 +7,7 @@ class Stack_List:
         self._top=None
         self._size=0
     # Method
-    def len(self):
+    def __len__(self):
         return self._size
 
     def is_empty(self):
